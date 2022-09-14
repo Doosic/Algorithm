@@ -1,4 +1,4 @@
-package String;
+package String.문자찾기;
 
 /*
     * 설명
@@ -21,14 +21,12 @@ package String;
 */
 
 import java.util.Scanner;
-public class characterSearch {
+public class Main {
 
     public static void main(String[] args) {
-        // 1.Scanner 를 통해 문자를 입력받는다.
         Scanner sc = new Scanner(System.in);
-        // 2.입력받은 문자를 str 변수에 담아준다.
         String str = sc.next();
-        // 3.입력받은 문자중 첫번째 문자를 가져온다.
+        // 1.입력받은 문자중 첫번째 문자를 가져온다.
         char c = sc.next().charAt(0);
         System.out.println(searchCharacter(str, c));
         sc.close();
@@ -36,10 +34,10 @@ public class characterSearch {
 
     private static int searchCharacter(String str, char t){
         int answer = 0;
-        // 4.대소문자 구분없이 가져와야 하기 때문에 UpperCase 를 이용한다.
+        // 2.대소문자 구분없이 가져와야 하기 때문에 UpperCase 를 이용한다.
         str = str.toUpperCase();
         t = Character.toUpperCase(t);
-        // 5.forEach 문을 사용하는데 그냥 문자열을 넣어주면 char 로 받을 수 없기에
+        // 3.forEach 문을 사용하는데 그냥 문자열을 넣어주면 char 로 받을 수 없기에
         //   toCharArray() 메서드를 통해 문자 배열로 바꿔준다.
         for (char x : str.toCharArray()){
             if (x == t){
