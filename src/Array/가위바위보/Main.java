@@ -35,6 +35,9 @@ public class Main {
         }
     }
 
+    /*
+        한 사람을 기준으로 두는것이 풀이하기 좋다.
+     */
     private static String[] solution(int n, int[] a, int[] b){
         String[] answer = new String[n];
         for(int i = 0; i < n; i++){
