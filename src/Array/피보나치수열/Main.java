@@ -23,6 +23,8 @@ public class Main {
         }
     }
 
+    // 만약 배열을 쓰지말고 for 문 만을 사용해야 할 때는 temp 를 사용하며 풀이하면 된다.
+    // 앞뒤 변경하면서 풀이
     private static int[] solution(int n){
         int[] answer = new int[n];
         answer[0] = 1;
