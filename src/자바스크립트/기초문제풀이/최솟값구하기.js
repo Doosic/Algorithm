@@ -25,3 +25,10 @@ solution = (arr) => {
 
 const arr = [5, 3, 7, 11, 2, 15, 17];
 console.log(solution(arr));
+
+solutionServe = (arr) => {
+  let answer = Math.min(...arr);
+  return answer;
+};
+
+console.log(solutionServe(arr));
