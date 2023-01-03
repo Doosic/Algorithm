@@ -22,3 +22,6 @@ const solution = (str) => {
 
 const str = "ItisTimeToStudy";
 console.log(solution(str));
+
+// 한번에 변환도 가능하다.
+console.log(str.toUpperCase());
