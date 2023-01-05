@@ -19,3 +19,27 @@ good
 time
 student
  */
+
+const solution = (n, arr) => {
+  let setMap = new Set();
+  for (let x of arr) {
+    setMap.add(x);
+  }
+
+  for (let x of setMap) console.log(x);
+};
+
+const n = 5;
+const arr = ["good", "time", "good", "time", "student"];
+console.log(solution(n, arr));
+
+const solutionIndexOf = (arr) => {
+  let answer;
+  answer = arr.filter((v, i) => {
+    if (arr.indexOf(v) === i) return true;
+  });
+
+  return answer;
+};
+
+console.log(solutionIndexOf(arr));
