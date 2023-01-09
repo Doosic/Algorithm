@@ -33,10 +33,11 @@ const n = 5;
 const arr = ["good", "time", "good", "time", "student"];
 console.log(solution(n, arr));
 
+// O(1)의 방법
 const solutionIndexOf = (arr) => {
   let answer;
   answer = arr.filter((v, i) => {
-    if (arr.indexOf(v) === i) return true;
+    return arr.indexOf(v) === i;
   });
 
   return answer;
