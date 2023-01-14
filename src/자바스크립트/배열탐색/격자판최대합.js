@@ -32,20 +32,19 @@ const solution = (n, arr) => {
   let diagoanlfirst = 0;
   let diagoanlLast = 0;
   for (let i = 0; i < n; i++) {
-    let sumVertical = 0;
-    let sumHorizontal = 0;
+    vertical = 0;
+    horizontal = 0;
     for (let j = 0; j < n; j++) {
-      sumVertical += arr[i][j];
-      sumHorizontal += arr[j][i];
+      vertical += arr[i][j];
+      horizontal += arr[j][i];
     }
-    vertical = sumVertical > vertical ? sumVertical : vertical;
-    horizontal = sumHorizontal > horizontal ? sumHorizontal : horizontal;
+    answer = Math.max(answer, vertical, horizontal);
     diagoanlfirst += arr[i][i];
     diagoanlLast += arr[i][n - 1 - i];
   }
-  let sum1 = vertical > horizontal ? vertical : horizontal;
-  let sum2 = diagoanlfirst > diagoanlLast ? diagoanlfirst : diagoanlLast;
-  answer = sum1 > sum2 ? sum1 : sum2;
+  let diagonalMaxNumber =
+    diagoanlfirst > diagoanlLast ? diagoanlfirst : diagoanlLast;
+  answer = answer > diagonalMaxNumber ? answer : diagonalMaxNumber;
   return answer;
 };
 
