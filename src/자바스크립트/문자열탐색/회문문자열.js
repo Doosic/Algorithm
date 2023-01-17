@@ -14,6 +14,7 @@ gooG
 YES
  */
 
+// 문자열을 반으로 쪼개서 하는 풀이방법!
 const solution = (str) => {
   let answer = "YES";
   str = str.toUpperCase();
@@ -28,4 +29,14 @@ const solution = (str) => {
 };
 
 const str = "gooG";
+console.log(solution(str));
+
+// 문자열을 뒤집어서 비교하는 방법
+const solutionSub = (str) => {
+  let answer = "YES";
+  str = str.toLowerCase();
+  if (str.split("").reverse().join("") !== str) return "NO";
+  return answer;
+};
+
 console.log(solution(str));
