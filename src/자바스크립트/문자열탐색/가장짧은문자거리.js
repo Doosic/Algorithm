@@ -14,7 +14,7 @@ teachermode e
  */
 
 const solution = (s, t) => {
-  let answer = "";
+  let answer = [];
   let bigInts = [];
   let smallInts = [];
   let cnt = 0;
@@ -30,9 +30,9 @@ const solution = (s, t) => {
   }
 
   for (let i = 0; i < s.length; i++) {
-    if (bigInts[i] > smallInts[i]) answer += `${smallInts[i]} `;
-    else if (bigInts[i] < smallInts[i]) answer += `${bigInts[i]} `;
-    else answer += `${bigInts[i]} `;
+    if (bigInts[i] > smallInts[i]) answer[i] = smallInts[i];
+    else if (bigInts[i] < smallInts[i]) answer[i] = bigInts[i];
+    else answer[i] = bigInts[i];
   }
   return answer;
 };
