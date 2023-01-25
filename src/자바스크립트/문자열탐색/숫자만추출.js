@@ -40,3 +40,12 @@ const numberObj = {
   9: true,
 };
 console.log(solution(str, numberObj));
+
+// isNaN(): 숫자가 아니라면 true
+const solutionSecond = (str) => {
+  let answer = "";
+  for (let x of str) {
+    if (!isNaN(x)) answer += x;
+  }
+  return parseInt(answer);
+};
